@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sejal | AWS DevOps Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0,255,255,0.4), transparent 70%);
+            top: -200px;
+            left: -200px;
+            animation: float 8s infinite alternate ease-in-out;
+            filter: blur(120px);
+            z-index: 0;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255,0,255,0.4), transparent 70%);
+            bottom: -200px;
+            right: -200px;
+            animation: float 10s infinite alternate ease-in-out;
+            filter: blur(120px);
+            z-index: 0;
+        }
+
+        @keyframes float {
+            from { transform: translateY(0px); }
+            to { transform: translateY(40px); }
+        }
+
+        header {
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            backdrop-filter: blur(15px);
+            background: rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            z-index: 10;
+        }
+
+        header h1 {
+            font-weight: 600;
+            font-size: 22px;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            margin-left: 25px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 400;
+            transition: 0.3s ease;
+            position: relative;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            background: cyan;
+            left: 0;
+            bottom: -5px;
+            transition: 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        section {
+            padding: 80px 8%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 90vh;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            font-weight: 700;
+        }
+
+        .hero span {
+            color: cyan;
+        }
+
+        .hero p {
+            margin-top: 20px;
+            font-size: 18px;
+            max-width: 600px;
+            opacity: 0.8;
+        }
+
+        .btn {
+            margin-top: 30px;
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 30px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            text-decoration: none;
+            color: #fff;
+            transition: 0.4s ease;
+        }
+
+        .btn:hover {
+            background: cyan;
+            color: #000;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,255,255,0.4);
+        }
+
+        .glass-card {
+            background: rgba(255,255,255,0.08);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.15);
+            transition: 0.4s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .skills-grid, .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        @media(max-width:768px){
+            .hero h2 { font-size: 34px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Sejal.dev</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Hi, I'm <span>Sejal</span><br>AWS DevOps Engineer</h2>
+    <p>
+        Passionate DevOps Engineer based in India specializing in AWS, Terraform, Jenkins, Docker, CI/CD pipelines and cloud automation. I design scalable, secure and cost-optimized cloud infrastructures with zero-downtime deployments.
+    </p>
+    <a href="#contact" class="btn">Let's Connect</a>
+</section>
+
+<section id="about">
+    <h3>About Me</h3>
+    <div class="glass-card">
+        <p>
+            I specialize in building automated DevOps workflows, implementing Infrastructure as Code using Terraform, configuring CI/CD pipelines in Jenkins, and managing containerized applications with Docker. I focus on reliability, security, performance optimization, and smooth production releases using blue-green deployment strategies.
+        </p>
+    </div>
+</section>
+
+<section id="skills">
+    <h3>Technical Skills</h3>
+    <div class="skills-grid">
+        <div class="glass-card">AWS (EC2, S3, IAM, VPC, RDS, CloudWatch)</div>
+        <div class="glass-card">Terraform (Infrastructure as Code)</div>
+        <div class="glass-card">Jenkins (CI/CD Pipelines)</div>
+        <div class="glass-card">Docker & Containerization</div>
+        <div class="glass-card">Linux Administration</div>
+        <div class="glass-card">Git & Version Control</div>
+    </div>
+</section>
+
+<section id="projects">
+    <h3>Projects</h3>
+    <div class="projects-grid">
+        <div class="glass-card">
+            <h4>CI/CD Pipeline Automation</h4>
+            <p>Implemented automated build and deployment pipelines using Jenkins integrated with Docker and AWS EC2.</p>
+        </div>
+        <div class="glass-card">
+            <h4>Infrastructure as Code Setup</h4>
+            <p>Designed reusable Terraform modules to provision scalable AWS infrastructure environments.</p>
+        </div>
+        <div class="glass-card">
+            <h4>Blue-Green Deployment Strategy</h4>
+            <p>Enabled zero-downtime deployments with quick rollback capability ensuring high availability.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h3>Contact</h3>
+    <div class="glass-card">
+        <p>Email: your-email@example.com</p>
+        <p>Location: Pune, India</p>
+        <p>Open to DevOps & Cloud Engineering Opportunities</p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Sejal | AWS DevOps Engineer Portfolio
+</footer>
+
+</body>
+</html>
